@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/changeFragment"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="33dp" />
+
+    <Button
+        android:id="@+id/changeFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:background="#00BCD4"
+        android:padding="10dp"
+        android:text="Favorites" />
+
+    <Button
+        android:id="@+id/changeFragment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="-3dp"
+        android:layout_toEndOf="@+id/changeFragment"
+        android:background="#FFEB3B"
+        android:onClick="DataBaseActivity"
+        android:padding="10dp"
+        android:text="DataBase" />
+
+</RelativeLayout>

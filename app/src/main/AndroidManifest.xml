@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pokemon">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/pikachu_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/pikachu_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.DataBase"
+            android:exported="true" />
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:authorities="by.bstu.providers.PokemonList"
+            android:name=".ContentProvider.PokemonProvider"
+            android:exported="true" />
+    </application>
+
+</manifest>

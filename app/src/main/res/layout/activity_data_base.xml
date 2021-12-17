@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_view"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center" />
+
+        <TextView
+            style="@style/text_view"
+            android:text="Введите период"
+            android:textAlignment="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/date_with"
+                    style="@style/edit_text"
+                    android:hint="YYYY-MM-DD"
+                    android:inputType="date"
+                    android:text="2000-01-01"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/date_on"
+                    style="@style/edit_text"
+                    android:hint="YYYY-MM-DD"
+                    android:inputType="date"
+                    android:text="2022-01-01"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <Spinner
+                    android:id="@+id/faculty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_select"
+            style="@style/button"
+            android:background="#4CAF50"
+            android:onClick="onClick"
+            android:text="Выбрать"
+            android:textColor="#FFFFFF" />
+
+        <GridView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></GridView>
+
+    </LinearLayout>
+
+</RelativeLayout>
